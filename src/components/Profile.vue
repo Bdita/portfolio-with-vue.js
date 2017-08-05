@@ -35,7 +35,7 @@ h4 {
 hr {
   width: 60px;
   margin-top: -2%;
-  border: 1.5px solid #41B883;
+  border: 1.5px solid #009688;
 }
 .img-circle {
    border-radius: 50%;
