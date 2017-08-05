@@ -1,7 +1,10 @@
 <template>
   <div id="app">
-    <img src="./assets/logo.png">
-    <router-view></router-view>
+  <md-layout md-gutter="16">
+    <md-layout md-flex="30" class='profileContainer'>
+      <router-view> </router-view>
+    </md-layout>
+  </md-layout>
   </div>
 </template>
 
@@ -18,6 +21,16 @@ export default {
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
   color: #2c3e50;
-  margin-top: 60px;
+  width: 100%;
+  height: 100vh;
+  margin: 0px;
+  padding: 0px;
+}
+.logo {
+  width: 20%;
+  margin: 2% 0 0 -65% ;
+}
+.profileContainer {
+  margin: 10% 0 0 35%;
 }
 </style>
