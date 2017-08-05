@@ -39,9 +39,6 @@ export default {
   margin: 0px;
   padding: 0px;
 }
-.logo {
-}
-
 .typeContainer {
   margin: 2.5% 10% 0% 10%;
   font-family: 'Londrina Shadow', cursive;
@@ -50,7 +47,6 @@ export default {
   line-height: 1.75em;
   letter-spacing: 2px;
 }
-
 .vue-typer .custom.char.typed {
   color: #009688;
 }
@@ -74,7 +70,6 @@ export default {
   margin: 2% 0 0 40%;
   box-shadow: none;git add
 }
-
 .actionContainer {
   margin: 2.5% 10% 4% 30%;
 }
