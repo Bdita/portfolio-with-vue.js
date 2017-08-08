@@ -29,7 +29,7 @@ h3 {
   font-size: 15px;
 }
 h4 {
-  margin-top: 0%;
+  margin-top: 2%;
   font-weight: 500;
 }
 hr {

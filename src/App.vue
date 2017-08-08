@@ -15,6 +15,9 @@
     </md-layout>
   </md-layout>
     <md-layout md-gutter="16">
+      <md-layout md-flex="5"class='sideNavContainer'>
+      <SideNav> </SideNav>
+      </md-layout>
       <md-layout md-flex="30" class='profileContainer'>
         <router-view> </router-view>
       </md-layout>
@@ -23,8 +26,13 @@
 </template>
 
 <script>
+import SideNav from './components/SideNav';
+
 export default {
   name: 'app',
+  components: {
+    SideNav,
+  },
 };
 </script>
 
@@ -67,13 +75,17 @@ export default {
   padding: 0% 10% 0% 10%;
   font-size: 1em;
   font-weight: bold;
-  margin: 2% 0 0 40%;
-  box-shadow: none;git add
+  margin: 2% 0 0 35%;
+  box-shadow: none;
 }
 .actionContainer {
   margin: 2.5% 10% 4% 30%;
 }
+.sideNavContainer {
+  border: 1px solid red;
+  margin: 10% 0% 0% 0%;
+}
 .profileContainer {
-  margin: 10% 0 0 35%;
+  margin: 10% 0 0 30%;
 }
 </style>
