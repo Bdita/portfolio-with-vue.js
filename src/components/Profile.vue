@@ -22,7 +22,7 @@ export default {
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
 .Profile {
-  margin: 0 0 0 0%;
+  margin: 0 0 0 0;
 }
 h3 {
   color: #313640;

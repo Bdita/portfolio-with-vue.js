@@ -3,7 +3,8 @@
   <!-- ....................................COMMENTS......................................... -->
 
         <!-- SideNavDrawer for each SideNav Menu item -->
-        <!-- TO DO: REFACTOR ( Add Abstraction, minimise code repetition) -->
+        <!-- TO DO: 1. Make Vue component for each side nav item and render -->
+        <!-- TO DO: 2. REFACTOR ( Add Abstraction, minimise code repetition) -->
 
   <!-- ......................................END............................................ -->
 
@@ -11,52 +12,87 @@
       <button id="btn1" class="buttonStyle" @click="toggleRightSidenavStory">
         <h3> My Story </h3>
       </button>
-      <md-sidenav class="md-right" ref="rightSidenavStory" @open="open('Right')" @close="close('Right')">
+      <div>
+        <md-sidenav class="md-right" ref="rightSidenavStory" >
             <MyStory></MyStory>
-       </md-sidenav>
+         </md-sidenav>
+      </div>
     </div>
 
     <div>
        <button id="btn2" class="buttonStyle" @click="toggleRightSidenavSkills">
          <h3> Skills </h3>
        </button>
-       <md-sidenav class="md-right" ref="rightSidenavSkills" @open="open('Right')" @close="close('Right')">
-       <md-toolbar>
-         <div class="md-toolbar-container">
-           <h3 class="md-title">Sidenav Skills content</h3>
-         </div>
-       </md-toolbar>
-        </md-sidenav>
+       <div>
+         <md-sidenav class="md-right" ref="rightSidenavSkills">
+           <md-toolbar>
+             <div class="md-toolbar-container">
+               <h3 class="md-title">Sidenav Skills content</h3>
+             </div>
+           </md-toolbar>
+         </md-sidenav>
+        </div>
     </div>
-    <!-- <a href="https://www.example.co.uk">
-      <div id="btn2" class="button">
-        <md-button @click="toggleRightSidenav"> Skills</md-button>
-      </div>
-    </a>
 
-    <a href="https://www.example.co.uk">
-      <div id="btn3" class="button">
-        <h3>Portfolio</h3>
-      </div>
-    </a>
+    <div>
+       <button id="btn3" class="buttonStyle" @click="toggleRightSidenavPortfolio">
+         <h3> Portfolio </h3>
+       </button>
+       <div>
+         <md-sidenav class="md-right" ref="rightSidenavPortfolio">
+           <md-toolbar>
+             <div class="md-toolbar-container">
+               <h3 class="md-title">Sidenav Portfolio content</h3>
+             </div>
+           </md-toolbar>
+         </md-sidenav>
+        </div>
+    </div>
 
-    <a href="https://www.example.co.uk">
-      <div id="btn4" class="button">
-        <h3>Testimonials</h3>
-      </div>
-    </a>
+    <div>
+       <button id="btn4" class="buttonStyle" @click="toggleRightSidenavTestimonials">
+         <h3> Testimonials </h3>
+       </button>
+       <div>
+         <md-sidenav class="md-right" ref="rightSidenavTestimonials">
+           <md-toolbar>
+             <div class="md-toolbar-container">
+               <h3 class="md-title">Sidenav Testimonials content</h3>
+             </div>
+           </md-toolbar>
+         </md-sidenav>
+        </div>
+    </div>
 
-    <a href="https://www.example.co.uk">
-      <div id="btn5" class="button">
-        <h3>Contact</h3>
-      </div>
-    </a>
+    <div>
+       <button id="btn5" class="buttonStyle" @click="toggleRightSidenavContact">
+         <h3> Contact </h3>
+       </button>
+       <div>
+         <md-sidenav class="md-right" ref="rightSidenavContact">
+           <md-toolbar>
+             <div class="md-toolbar-container">
+               <h3 class="md-title">Sidenav Contact content</h3>
+             </div>
+           </md-toolbar>
+         </md-sidenav>
+        </div>
+    </div>
 
-    <a href="https://www.example.co.uk">
-      <div id="btn6" class="button">
-        <h3>ABOUT</h3>
-      </div>
-    </a> -->
+    <div>
+       <button id="btn6" class="buttonStyle" @click="toggleRightSidenavResume">
+         <h3> Resume </h3>
+       </button>
+       <div>
+         <md-sidenav class="md-right" ref="rightSidenavResume">
+           <md-toolbar>
+             <div class="md-toolbar-container">
+               <h3 class="md-title">Sidenav Resume content</h3>
+             </div>
+           </md-toolbar>
+         </md-sidenav>
+        </div>
+    </div>
   </div>
 </template>
 
@@ -67,10 +103,22 @@ export default {
   name: 'sideNav',
   methods: {
     toggleRightSidenavStory() {
-      this.$refs.rightSidenavStory.toggle();
+      this.$refs.rightSidenavStory.open();
     },
     toggleRightSidenavSkills() {
       this.$refs.rightSidenavSkills.toggle();
+    },
+    toggleRightSidenavPortfolio() {
+      this.$refs.rightSidenavPortfolio.toggle();
+    },
+    toggleRightSidenavTestimonials() {
+      this.$refs.rightSidenavTestimonials.toggle();
+    },
+    toggleRightSidenavContact() {
+      this.$refs.rightSidenavContact.toggle();
+    },
+    toggleRightSidenavResume() {
+      this.$refs.rightSidenavResume.toggle();
     },
   },
   components: {
@@ -80,6 +128,20 @@ export default {
 </script>
 
 <style>
+.md-sidenav .md-sidenav-content {
+    width: 715px;
+}
+
+.md-sidenav .md-backdrop {
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.md-theme-default.md-sidenav .md-sidenav-content {
+    background-color: #E91E63;
+    color: rgba(255, 255, 255, .87);
+    font-size: 48px;
+}
+
 h3 {
   font-family: verdana, sans-serif;
   font-weight: bold;
@@ -144,6 +206,16 @@ a {
   transition: 0s;
 }
 
+@media (max-width: 1280px) {
+  .md-sidenav .md-sidenav-content {
+      width: 635px;
+  }
+}
 
+@media (max-width: 1024px) {
+  .md-sidenav .md-sidenav-content {
+      width: 507px;
+  }
+}
 
 </style>

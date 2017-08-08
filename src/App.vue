@@ -3,10 +3,10 @@
   <md-layout>
     <md-layout class='typeContainer'>
       <vue-typer text='< bandit of code />'
-      pre-type-delay='70'
-      type-delay='70'
-      pre-erase-delay='2000'
-      erase-delay='250'
+      :pre-type-delay=70
+      :type-delay=70
+      :pre-erase-delay=2000
+      :erase-delay=250
       eraseStyle='select-back'
       caret-animation='blink'></vue-typer>
     </md-layout>
@@ -37,6 +37,11 @@ export default {
 </script>
 
 <style>
+body {
+  overflow-x: hidden;
+  overflow-y: hidden;
+}
+
 #app {
   font-family: 'Avenir', Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -87,4 +92,5 @@ export default {
 .profileContainer {
   margin: 10% 0 0 30%;
 }
+
 </style>
