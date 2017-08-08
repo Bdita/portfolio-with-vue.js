@@ -1,6 +1,6 @@
 <template>
   <div class="myStory">
-      <p> my Story </p>
+      <h3> My Story </h3>
   </div>
 </template>
 
@@ -12,4 +12,14 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped>
+  .myStory {
+    font-family: 'Archivo Black', sans-serif;
+  }
+
+  h3 {
+    font-family: 'Archivo Black', sans-serif;
+    font-size: 25px;
+    font-weight: normal;
+    color: #fff;
+  }
 </style>
