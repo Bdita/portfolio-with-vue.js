@@ -16,7 +16,7 @@
   </md-layout>
     <md-layout md-gutter="16">
       <md-layout md-flex="5"class='sideNavContainer'>
-      <SideNav> </SideNav>
+        <SideNav> </SideNav>
       </md-layout>
       <md-layout md-flex="30" class='profileContainer'>
         <router-view> </router-view>
@@ -50,7 +50,7 @@ export default {
 .typeContainer {
   margin: 2.5% 10% 0% 10%;
   font-family: 'Londrina Shadow', cursive;
-  font-size: 1.75em;
+  font-size: 1.50em;
   font-weight: bold;
   line-height: 1.75em;
   letter-spacing: 2px;
@@ -82,7 +82,6 @@ export default {
   margin: 2.5% 10% 4% 30%;
 }
 .sideNavContainer {
-  border: 1px solid red;
   margin: 10% 0% 0% 0%;
 }
 .profileContainer {
