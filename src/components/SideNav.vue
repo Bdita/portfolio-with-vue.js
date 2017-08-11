@@ -129,7 +129,7 @@ export default {
 
 <style>
 .md-sidenav .md-sidenav-content {
-    width: 715px;
+  width: 715px;
 }
 
 .md-sidenav .md-backdrop {
@@ -142,7 +142,7 @@ export default {
     font-size: 48px;
 }
 
-h3 {
+.buttonStyle h3 {
   font-family: verdana, sans-serif;
   font-weight: bold;
   text-align: center;
