@@ -15,6 +15,9 @@
     </md-layout>
   </md-layout>
     <md-layout md-gutter="16">
+      <div class="arrow bounce">
+        <i class="material-icons">keyboard_arrow_down</i>
+      </div>
       <md-layout md-flex="5"class='sideNavContainer'>
         <SideNav> </SideNav>
       </md-layout>
@@ -93,4 +96,54 @@ body {
   margin: 10% 0 0 30%;
 }
 
+.arrow {
+  position: fixed;
+  bottom: 55%;
+  margin-left: 5px;
+  width: 40px;
+  height: 40px;
+  background-size: contain;
+  color: #E91E63;
+
+}
+
+.bounce {
+    -webkit-animation: bounce 2s infinite;
+    animation: bounce 2s infinite;
+}
+
+/* Scroll down indicator (bouncing) */
+@-webkit-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px); } }
+@-moz-keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -moz-transform: translateY(0); }
+  40% {
+    -moz-transform: translateY(-30px); }
+  60% {
+    -moz-transform: translateY(-15px); } }
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    -webkit-transform: translateY(0);
+    -moz-transform: translateY(0);
+    -ms-transform: translateY(0);
+    -o-transform: translateY(0);
+    transform: translateY(0); }
+  40% {
+    -webkit-transform: translateY(-30px);
+    -moz-transform: translateY(-30px);
+    -ms-transform: translateY(-30px);
+    -o-transform: translateY(-30px);
+    transform: translateY(-30px); }
+  60% {
+    -webkit-transform: translateY(-15px);
+    -moz-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+    transform: translateY(-15px); } }
 </style>
