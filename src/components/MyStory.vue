@@ -1,8 +1,8 @@
 <template>
-  <div class="myStory">
-      <h3 data-content="">My Story</h3>
+  <div class='myStory'>
+      <h3 data-content=''>My Story</h3>
       <div class='cards-container'>
-        <p> Test </p>
+          <p> Hello </p>
       </div>
   </div>
 </template>
@@ -13,37 +13,30 @@ export default {
 };
 </script>
 
-<!-- Add "scoped" attribute to limit CSS to this component only -->
+<!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
   .myStory {
     font-family: 'Archivo Black', sans-serif;
-    margin-top: 10%;
+    margin-top: -2%;
   }
   .cards-container {
-    width: 50%;
-    margin: 10% 0 0 5%;
-  }
-  .whiteCard .md-card {
-    color: #000000;
-    background-color: #fff;
-    position: relative;
-  }
-  .purpleCard .md-card {
-    margin: -5% -80% 0 80%;
-    background-color: #300e5f;
-    z-index: 1;
+    width: 98%;
+    margin: 1%;
+    font-family: 'Zilla Slab', serif;
+    font-size: 20px;
+    border: 1px solid red;
   }
 
   h3 {
     font-family: 'Archivo Black', sans-serif;
-    font-size: 30px;
+    font-size: 25px;
     font-weight: normal;
     position: relative;
     color: #fff;
   }
 
   h3:after {
-    content: "";
+    content: '';
     position: absolute;
     color: #fff;
     top: 70%;
@@ -52,6 +45,10 @@ export default {
     height: 70%;
     background-color: #300e5f;
     z-index: -10;
+  }
+
+  .animated-paragraph {
+
   }
 
 </style>
