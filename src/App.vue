@@ -87,7 +87,7 @@ body {
   box-shadow: none;
 }
 .actionContainer {
-  margin: 2.5% 10% 4% 25%;
+  margin: 2.5% 10% 4% 40%;
 }
 .sideNavContainer {
   margin: 10% 0% 0% 0%;
@@ -101,7 +101,6 @@ body {
   margin-left: 5px;
   width: 40px;
   height: 40px;
-  background-size: contain;
   color: #E91E63;
 }
 .bounce {
