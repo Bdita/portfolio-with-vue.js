@@ -95,7 +95,6 @@ body {
 .profileContainer {
   margin: 10% 0 0 30%;
 }
-
 .arrow {
   position: fixed;
   bottom: 55%;
@@ -106,27 +105,12 @@ body {
   color: #E91E63;
 
 }
-
 .bounce {
     -webkit-animation: bounce 2s infinite;
     animation: bounce 2s infinite;
 }
 
 /* Scroll down indicator (bouncing) */
-@-webkit-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -webkit-transform: translateY(0); }
-  40% {
-    -webkit-transform: translateY(-30px); }
-  60% {
-    -webkit-transform: translateY(-15px); } }
-@-moz-keyframes bounce {
-  0%, 20%, 50%, 80%, 100% {
-    -moz-transform: translateY(0); }
-  40% {
-    -moz-transform: translateY(-30px); }
-  60% {
-    -moz-transform: translateY(-15px); } }
 @keyframes bounce {
   0%, 20%, 50%, 80%, 100% {
     -webkit-transform: translateY(0);
