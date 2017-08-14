@@ -13,12 +13,18 @@
         <h3> My Story </h3>
       </button>
       <div>
-        <md-sidenav class="md-right" ref="rightSidenavStory" >
+        <md-sidenav class="md-right" ref="rightSidenavStory" @close="close('Right')">
+        <span class="close-button">
+          <md-button class="md-icon-button right-corner" @click="closeRightSidenavStory">
+            <md-icon>close</md-icon>
+          </md-button>
+        </span>
             <MyStory></MyStory>
          </md-sidenav>
       </div>
     </div>
 
+    <!-- ................................TO DO.................................
     <div>
        <button id="btn2" class="buttonStyle" @click="toggleRightSidenavSkills">
          <h3> Skills </h3>
@@ -92,7 +98,7 @@
            </md-toolbar>
          </md-sidenav>
         </div>
-    </div>
+    </div> ................................................................... -->
   </div>
 </template>
 
@@ -105,21 +111,25 @@ export default {
     toggleRightSidenavStory() {
       this.$refs.rightSidenavStory.open();
     },
-    toggleRightSidenavSkills() {
-      this.$refs.rightSidenavSkills.toggle();
+    closeRightSidenavStory() {
+      this.$refs.rightSidenavStory.close();
     },
-    toggleRightSidenavPortfolio() {
-      this.$refs.rightSidenavPortfolio.toggle();
-    },
-    toggleRightSidenavTestimonials() {
-      this.$refs.rightSidenavTestimonials.toggle();
-    },
-    toggleRightSidenavContact() {
-      this.$refs.rightSidenavContact.toggle();
-    },
-    toggleRightSidenavResume() {
-      this.$refs.rightSidenavResume.toggle();
-    },
+    // .............. TO DO..................
+    // toggleRightSidenavSkills() {
+    //  this.$refs.rightSidenavSkills.toggle();
+    // },
+    // toggleRightSidenavPortfolio() {
+    //  this.$refs.rightSidenavPortfolio.toggle();
+    // },
+    // toggleRightSidenavTestimonials() {
+    //  this.$refs.rightSidenavTestimonials.toggle();
+    // },
+    // toggleRightSidenavContact() {
+    //  this.$refs.rightSidenavContact.toggle();
+    // },
+    // toggleRightSidenavResume() {
+    //  this.$refs.rightSidenavResume.toggle();
+    // },
   },
   components: {
     MyStory,
@@ -155,10 +165,10 @@ a {
 }
 
 #btn1 {
-  margin-top: 0;
+  margin-top: 80px;
 }
 
-#btn2 {
+/* #btn2 {
     margin-top: 40px;
 }
 
@@ -176,7 +186,7 @@ a {
 
 #btn6 {
   margin-top: 200px;
-}
+} */
 
 .buttonStyle {
   background-color: #009688;
@@ -204,6 +214,10 @@ a {
 .buttonStyle:active {
   background-color: #E91E63;
   transition: 0s;
+}
+.close-button {
+  width: 20px;
+  margin-right: -90%;
 }
 
 @media (max-width: 1280px) {
