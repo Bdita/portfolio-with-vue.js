@@ -1,5 +1,5 @@
 <template>
-  <div id="SideNav">
+  <div id="sidenav">
   <!-- ....................................COMMENTS......................................... -->
 
         <!-- SideNavDrawer for each SideNav Menu item -->
@@ -9,13 +9,13 @@
   <!-- ......................................END............................................ -->
 
     <div>
-      <button id="btn1" class="buttonStyle" @click="toggleRightSidenavStory">
+      <button id="btn1" class="button-style" @click="toggleRightSideNavStory">
         <h3> My Story </h3>
       </button>
       <div>
-        <md-sidenav class="md-right" ref="rightSidenavStory" @close="close('Right')">
+        <md-sidenav class="md-right" ref="rightSideNavStory" @close="close('Right')">
         <span class="close-button">
-          <md-button class="md-icon-button right-corner" @click="closeRightSidenavStory">
+          <md-button class="md-icon-button right-corner" @click="closeRightSideNavStory">
             <md-icon>close</md-icon>
           </md-button>
         </span>
@@ -106,13 +106,13 @@
 import MyStory from './MyStory';
 
 export default {
-  name: 'sideNav',
+  name: 'SideNav',
   methods: {
-    toggleRightSidenavStory() {
-      this.$refs.rightSidenavStory.open();
+    toggleRightSideNavStory() {
+      this.$refs.rightSideNavStory.open();
     },
-    closeRightSidenavStory() {
-      this.$refs.rightSidenavStory.close();
+    closeRightSideNavStory() {
+      this.$refs.rightSideNavStory.close();
     },
     // .............. TO DO..................
     // toggleRightSidenavSkills() {
@@ -152,7 +152,7 @@ export default {
     font-size: 48px;
 }
 
-.buttonStyle h3 {
+.button-style h3 {
   font-family: verdana, sans-serif;
   font-weight: bold;
   text-align: center;
@@ -188,7 +188,7 @@ a {
   margin-top: 200px;
 } */
 
-.buttonStyle {
+.button-style {
   background-color: #009688;
   color: #2c3e50;
   border: none;
@@ -199,11 +199,11 @@ a {
   transition: .7s ease;
   border-radius: 50px;
 }
-  .buttonStyle  h3 {
+  .button-style  h3 {
     color: #fff;
   }
 
-.buttonStyle:hover {
+.button-style:hover {
   background-color: #009688;
   position: fixed;
   left: 1px;
@@ -211,7 +211,7 @@ a {
   border-radius: 50px;
 }
 
-.buttonStyle:active {
+.button-style:active {
   background-color: #E91E63;
   transition: 0s;
 }
