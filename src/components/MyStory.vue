@@ -1,7 +1,7 @@
 <template>
-  <div class='myStory'>
+  <div class='my-story'>
       <h3 data-content=''>My Story</h3>
-      <div class='cards-container'>
+      <div class='para-container'>
           <p> Hello </p>
       </div>
   </div>
@@ -9,22 +9,21 @@
 
 <script>
 export default {
-  name: 'myStory',
+  name: 'my-story',
 };
 </script>
 
 <!-- Add 'scoped' attribute to limit CSS to this component only -->
 <style scoped>
-  .myStory {
+  .my-story {
     font-family: 'Archivo Black', sans-serif;
     margin-top: -2%;
   }
-  .cards-container {
+  .para-container {
     width: 98%;
     margin: 1%;
     font-family: 'Zilla Slab', serif;
     font-size: 20px;
-    border: 1px solid red;
   }
 
   h3 {
@@ -46,9 +45,4 @@ export default {
     background-color: #300e5f;
     z-index: -10;
   }
-
-  .animated-paragraph {
-
-  }
-
 </style>

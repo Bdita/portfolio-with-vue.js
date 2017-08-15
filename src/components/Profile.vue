@@ -1,5 +1,5 @@
 <template>
-  <div class="Profile">
+  <div class="profile">
     <img src="http://res.cloudinary.com/dihqhbf9i/image/upload/e_art:incognito/v1501820072/11951142_10206755264775458_2690845586774658783_n_xgjsn9.jpg" class='img-circle'>
     <h3> {{ name.toUpperCase() }} </h3>
     <hr>
@@ -21,7 +21,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style>
-.Profile {
+.profile {
   margin: 0 0 0 0;
 }
 h3 {
